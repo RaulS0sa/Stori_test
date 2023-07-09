@@ -13,10 +13,15 @@
 Create a system that process Debit and Credit Transactions and send an
 email summarizing the transactions by month and year.
 
-ToDo: Send events to S3 Buckets, 
-Add JWT or similar Security Measure,
-Update date fields in transactions table to be not null
-Prevent Duplicate Transactions
+ToDo: 
+
+Send events to S3 Buckets.
+
+Add JWT or similar Security Measure.
+
+Update date field in transactions table to be not null.
+
+Prevent Duplicate Transactions.
 
 ## Requisites
 1. An AWS Account
@@ -129,6 +134,8 @@ mayor components of the system, follow them to add/update the functionalities
 | Email          | varchar | 255    | False    |          |
 | Debit_balance  | decimal | 65,2   | True     |          |
 | Credit_balance | decimal | 65,2   | True     |          |
+
+
 *PK = Primary Key,
 *AINC = Auto Increment
 
@@ -141,6 +148,8 @@ mayor components of the system, follow them to add/update the functionalities
 | Date       | DATETIME |        | False    |          |
 | Type       | varchar  | 255    | False    |          |
 | Ammount    | decimal  | 65,2   | True     |          |
+
+
 *PK = Primary Key,
 *AINC = Auto Increment,
 *FK = Foreign key
@@ -157,7 +166,7 @@ mayor components of the system, follow them to add/update the functionalities
 | fetch clients       | done   | result only visible in Lambda console | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/fetch_users_stori?tab=code) | [Link](lambda_functions/fetch_clients)       |
 | upload transactions | done   |                                       | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/upload_transactions_stori?tab=code) | [Link](lambda_functions/upload_transactions) |
 | fetch transactions  | done   |                                       | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/fetch_transactions_stori?tab=code) | [Link](lambda_functions/fetch_transactions)  |
-| send email          | done   | only invocable through SNS            | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/send_email_stori?tab=code) | [Link](lambda_functions/send_email)          |
+| send email          | done   | only invocable through SNS            | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/send_email_stori?tab=code) | [Link](lambda_functions/send_emall)          |
 
 ### endpoints
 1. Create user
