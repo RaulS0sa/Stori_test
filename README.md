@@ -150,14 +150,14 @@ mayor components of the system, follow them to add/update the functionalities
 ## Lambdas and endpoints
 
 ### lambdas
-| Endpoint            | status | Other                                 | Link     |
-|---------------------|--------|---------------------------------------|----------|
-| create client       | done   |                                       | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/create_user_stori?tab=code) |
-| update client       | to do  |                                       |          |
-| fetch clients       | done   | result only visible in Lambda console | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/fetch_users_stori?tab=code) |
-| upload transactions | done   |                                       | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/upload_transactions_stori?tab=code) |
-| fetch transactions  | done   |                                       | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/fetch_transactions_stori?tab=code) |
-| send email          | done   | only invocable through SNS            | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/send_email_stori?tab=code) |
+| Endpoint            | status | Other                                 | Link     | Code                                         |
+|---------------------|--------|---------------------------------------|----------|----------------------------------------------|
+| create client       | done   |                                       | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/create_user_stori?tab=code) | [Link](lambda_functions/create_client)       |
+| update client       | to do  |                                       |          |                                              |
+| fetch clients       | done   | result only visible in Lambda console | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/fetch_users_stori?tab=code) | [Link](lambda_functions/fetch_clients)       |
+| upload transactions | done   |                                       | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/upload_transactions_stori?tab=code) | [Link](lambda_functions/upload_transactions) |
+| fetch transactions  | done   |                                       | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/fetch_transactions_stori?tab=code) | [Link](lambda_functions/fetch_transactions)  |
+| send email          | done   | only invocable through SNS            | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/send_email_stori?tab=code) | [Link](lambda_functions/send_email)          |
 
 ### endpoints
 1. Create user
