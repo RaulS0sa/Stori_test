@@ -46,3 +46,4 @@ lambda_test/package/pymysql/times.py
 Samples/database.ini
 Samples/postgres_conect.py
 Samples/postgres_conect2.py
+.aws/credentials
