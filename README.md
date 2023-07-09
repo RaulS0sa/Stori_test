@@ -1,13 +1,13 @@
 # Stori test
 ## Index
-1. [Objective](objective)
-2. [Requisites](requisites)
-3. [Architecture](architecture)
-4. [Procedure](procedure)
-5. [Schemas](Schemas)
-6. [Lambdas and endpoints](lambdas-and-endpoints)
-7. [Driver Code](driver-code)
-8. [References](references)
+1. [Objective](#objective)
+2. [Requisites](#requisites)
+3. [Architecture](#architecture)
+4. [Procedure](#procedure)
+5. [Schemas](#schemas)
+6. [Lambdas and endpoints](#lambdas-and-endpoints)
+7. [Driver Code](#driver-code)
+8. [References](#references)
 
 ## Objective
 Create a system that process Debit and Credit Transactions and send an
@@ -150,14 +150,14 @@ mayor components of the system, follow them to add/update the functionalities
 ## Lambdas and endpoints
 
 ### lambdas
-| Endpoint            | status | Other                                 | Link |
-|---------------------|--------|---------------------------------------|------|
-| create client       | done   |                                       |      |
-| update client       | to do  |                                       |      |
-| fetch clients       | done   | result only visible in Lambda console |      |
-| upload transactions | done   |                                       |      |
-| fetch transactions  | done   |                                       |      |
-| send email          | done   | only invocable through SNS            |      |
+| Endpoint            | status | Other                                 | Link     |
+|---------------------|--------|---------------------------------------|----------|
+| create client       | done   |                                       | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/create_user_stori?tab=code) |
+| update client       | to do  |                                       |          |
+| fetch clients       | done   | result only visible in Lambda console | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/fetch_users_stori?tab=code) |
+| upload transactions | done   |                                       | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/upload_transactions_stori?tab=code) |
+| fetch transactions  | done   |                                       | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/fetch_transactions_stori?tab=code) |
+| send email          | done   | only invocable through SNS            | [Link](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/send_email_stori?tab=code) |
 
 ### endpoints
 1. Create user
