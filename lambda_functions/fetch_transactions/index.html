@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-family: Arial
+        }
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+        }
+
+        td, th {
+          border: 1px solid #fdfdfd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #ededed;
+        }
+    </style>
+
+</head>
+<body style="background: rgb(0,98,111);background: linear-gradient(180deg, rgba(0,98,111,1) 0%, rgba(0,146,145,1) 100%);">
+    <div style="width:80%; height:90%;margin-left:10%;margin-top:5%;margin-bottom:5%;border-radius:25px;background-color:white">
+        <div style="">
+            <div style="height:106px; width:100%">
+
+                <div style="width:20%;float:left; margin-left:5%">
+                    <img style=" margin-top:25px; border-radius:18px; height:106px; width:106px" src="https://media.licdn.com/dms/image/C560BAQG8b-V-bW9RxQ/company-logo_200_200/0/1657901556363?e=1697068800&v=beta&t=heqhWzTK0320XhGZjf9bva4a2iF4Uw__yBn21UYaQO8">
+                </div>
+                <div style="margin-top:5.5%;width:70%;float:left">
+                    <h1 style="padding-left:32px">Stori</h1>
+                </div>
+
+            </div>
+            <div style="display:none;background-color:#000000; height:1px;width: 35%; margin-left:5%;">
+            </div>
+            <div style="margin-left:5%;width:100%;margin-top:50px">
+                <h3>
+                    Debit Balance $
+                    <span>{{Debit_Balance}}</span>
+                </h3>
+                <h3>
+                     Credit Balance $
+                    <span>{{Credit_Balance}}</span>
+                </h3>
+                <h3>
+                     Total Balance $
+                    <span>{{Total_Balance}}</span>
+                </h3>
+            </div>
+           <div style="margin-left:5%;width:100%;margin-top:50px">
+               <h5>
+                    Transactions (Debit)
+                </h5>
+              <table>
+                  <tr>
+                    <th>Month/Year</th>
+                    <th>Qty.</th>
+                    <th>Avg Amount</th>
+                  </tr>
+                 {{debit_table_elements}}
+              </table>
+           </div>
+            <div style="margin-left:5%;width:100%;margin-top:50px">
+               <h5>
+                    Transactions (Credit)
+                </h5>
+              <table>
+                  <tr>
+                    <th>Month/Year</th>
+                    <th>Qty.</th>
+                    <th>Avg Amount</th>
+                  </tr>
+                 {{credit_table_elements}}
+              </table>
+           </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
