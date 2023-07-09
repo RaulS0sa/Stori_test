@@ -1,13 +1,13 @@
 # Stori test
 ## Index
-1. Objective
-2. Requisites
-3. Architecture
-4. Procedure
-5. Schemas
-6. Lambdas and endpoints
-7. Driver Code
-8. References
+1. [Objective](objective)
+2. [Requisites](requisites)
+3. [Architecture](architecture)
+4. [Procedure](procedure)
+5. [Schemas](Schemas)
+6. [Lambdas and endpoints](lambdas-and-endpoints)
+7. [Driver Code](driver-code)
+8. [References](references)
 
 ## Objective
 Create a system that process Debit and Credit Transactions and send an
