@@ -4,7 +4,7 @@ import pymysql
 import os
 from http import HTTPStatus
 from datetime import datetime
-from decimal import Decimal
+from decimal import *
 
 # rds settings
 user_name = os.environ['USER_NAME']
@@ -14,6 +14,7 @@ db_name = os.environ['DB_NAME']
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
+getcontext().prec = 2
 
 # create the database connection outside of the handler to allow connections to be
 # re-used by subsequent function invocations.

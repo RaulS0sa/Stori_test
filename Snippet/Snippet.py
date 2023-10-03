@@ -2,9 +2,9 @@ import json
 import csv
 import requests
 
-cu_url = 'https://krjbj95w08.execute-api.us-east-2.amazonaws.com/dev/create_user'
-ut_url = 'https://krjbj95w08.execute-api.us-east-2.amazonaws.com/dev/upload_transactions'
-ft_url = 'https://krjbj95w08.execute-api.us-east-2.amazonaws.com/dev/fetch_transactions'
+cu_url = 'https://z8xs5d74w3.execute-api.us-east-2.amazonaws.com/dev/create_user'
+ut_url = 'https://z8xs5d74w3.execute-api.us-east-2.amazonaws.com/dev/upload_transaction'
+ft_url = 'https://z8xs5d74w3.execute-api.us-east-2.amazonaws.com/dev/fetch_transactions'
 
 
 cu_payload = {

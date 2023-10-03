@@ -6,18 +6,20 @@ import boto3
 import json
 
 from http import HTTPStatus
-from decimal import Decimal
+from decimal import *
 
 # rds settings
 user_name = os.environ['USER_NAME']
 password = os.environ['PASSWORD']
 rds_host = os.environ['RDS_HOST']
 db_name = os.environ['DB_NAME']
+sns_topic = os.environ['SNS_TOPIC']
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 aws_client = boto3.client('sns')
+getcontext().prec = 2
 
 # create the database connection outside of the handler to allow connections to be
 # re-used by subsequent function invocations.
@@ -73,6 +75,8 @@ def lambda_handler(event, context):
             if result:
                 client = result[0]
 
+                logger.info("client found")
+
                 cur.execute(f"SELECT * FROM Transactions WHERE Client_id='{client_id}'")
 
                 # Splits transactions by type and then groups them by Month/Year tuple
@@ -113,14 +117,15 @@ def lambda_handler(event, context):
                                 "Amount": row["Ammount"],
                                 "Count": 1
                             }
-
+                logger.info("balance computed")
                 mail_text = generate_mail(debit_balance, credit_balance, dates_set_debit, dates_set_credit)
-
+                logger.info("email generated")
                 conn.commit()
-
+                
+                
                 # send account summary through sns
                 response = aws_client.publish(
-                    TopicArn='arn:aws:sns:us-east-1:113564975329:email_send_topic',
+                    TopicArn=sns_topic,
                     Message=json.dumps({
                         "client": client["Email"],
                         "subject": "Your Balance",
@@ -143,5 +148,6 @@ def lambda_handler(event, context):
     except Exception as ex:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-        print(exc_type, fname, exc_tb.tb_lineno)
+        print(f"exc_type: {exc_type}, fname: {fname}, lineno: {exc_tb.tb_lineno}")
+        logger.error(f"exc_type: {exc_type}, fname: {fname}, lineno: {exc_tb.tb_lineno}")
         raise

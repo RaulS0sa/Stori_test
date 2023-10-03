@@ -170,8 +170,7 @@ mayor components of the system, follow them to add/update the functionalities
 
 ### endpoints
 1. Create user
-    - endpoint:
-        - https://krjbj95w08.execute-api.us-east-2.amazonaws.com/dev/create_user
+    - endpoint: https://z8xs5d74w3.execute-api.us-east-2.amazonaws.com/dev/create_user
     - sample payload:
       ``` 
       { 
@@ -181,7 +180,7 @@ mayor components of the system, follow them to add/update the functionalities
 
 2. Upload Transaction
    - endpoint:
-     - https://krjbj95w08.execute-api.us-east-2.amazonaws.com/dev/upload_transactions
+     - https://z8xs5d74w3.execute-api.us-east-2.amazonaws.com/dev/upload_transaction
    - sample payload:
      ``` 
        {
@@ -194,7 +193,7 @@ mayor components of the system, follow them to add/update the functionalities
 
 3. Fetch Transactions
     - endpoint
-      - https://krjbj95w08.execute-api.us-east-2.amazonaws.com/dev/fetch_transactions
+      - https://z8xs5d74w3.execute-api.us-east-2.amazonaws.com/dev/fetch_transactions
     - sample payload
        ```
        {
@@ -212,9 +211,9 @@ import json
 import csv
 import requests
 
-cu_url = 'https://krjbj95w08.execute-api.us-east-2.amazonaws.com/dev/create_user'
-ut_url = 'https://krjbj95w08.execute-api.us-east-2.amazonaws.com/dev/upload_transactions'
-ft_url = 'https://krjbj95w08.execute-api.us-east-2.amazonaws.com/dev/fetch_transactions'
+cu_url = 'https://z8xs5d74w3.execute-api.us-east-2.amazonaws.com/dev/create_user'
+ut_url = 'https://z8xs5d74w3.execute-api.us-east-2.amazonaws.com/dev/upload_transaction'
+ft_url = 'https://z8xs5d74w3.execute-api.us-east-2.amazonaws.com/dev/fetch_transactions'
 
 
 cu_payload = {
